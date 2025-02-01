@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnglishActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/TVQ1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Question 1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TVQuestion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:text="3 + 1"
+                android:textColor="@color/black"
+                android:textSize="50sp" />
+
+            <RadioGroup
+                android:id="@+id/RGQ1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+
+                <RadioButton
+                    android:id="@+id/Q1option1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    android:text="4"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/Q1option2"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    android:text="5"
+                    android:textSize="20sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/TVQ2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginStart="20dp"
+                android:text="Question 2"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TVQuestion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:text="5 + 2"
+                android:textColor="@color/black"
+                android:textSize="50sp" />
+
+            <RadioGroup
+                android:id="@+id/RGQ2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+
+                <RadioButton
+                    android:id="@+id/Q2option1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    android:text="10"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/Q2option2"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    android:text="7"
+                    android:textSize="20sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/TVQ3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginStart="4dp"
+                android:text="Question 3"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TVQuestion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:text="5 + 2 - 5"
+                android:textColor="@color/black"
+                android:textSize="50sp" />
+
+            <RadioGroup
+                android:id="@+id/RGQ3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+
+                <RadioButton
+                    android:id="@+id/Q3option1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    android:text="2"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/Q3option2"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    android:text="5"
+                    android:textSize="20sp" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/BtnSubmitMath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
