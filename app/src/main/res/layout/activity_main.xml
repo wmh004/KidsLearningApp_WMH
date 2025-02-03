@@ -7,27 +7,32 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/TBMainAct"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Kids Learning App"
-        android:textColor="@color/black"
-        android:textSize="40sp"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="#FF1976D2"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingStart="30dp"
+        app:title="Kids Learning App"
+        app:titleTextColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/BtnMathTest"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#87CEEB"
+        android:drawableTop="@drawable/baseline_add_24"
         android:text="Math Test"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:backgroundTint="#87CEEB"
+        app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,13 +40,15 @@
 
     <Button
         android:id="@+id/BtnEnglishTest"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="English Test"
         android:textSize="20sp"
         android:textColor="@color/black"
         android:backgroundTint="#FFFF00"
+        android:drawableTop="@drawable/baseline_language_24"
+        app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BtnMathTest" />
@@ -51,14 +58,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="10dp"
+        android:background="@drawable/tv_background1"
         android:orientation="vertical"
         android:padding="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toTopOf="@+id/TBMainAct">
 
         <TextView
             android:id="@+id/TV"

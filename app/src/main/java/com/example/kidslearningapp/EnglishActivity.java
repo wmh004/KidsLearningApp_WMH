@@ -2,6 +2,7 @@ package com.example.kidslearningapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -9,6 +10,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.kidslearningapp.DB.ActivityViewModel;
@@ -25,6 +27,15 @@ public class EnglishActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_english);
 
+        // Toolbar setup
+        Toolbar toolbar = findViewById(R.id.TBMainAct);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.baseline_arrow_back_ios_24);
+        }
+
+        // Initialise ActivityViewModel
         viewModel = new ViewModelProvider(this).get(ActivityViewModel.class);
 
         // Set listeners for each RadioGroup
@@ -70,5 +81,15 @@ public class EnglishActivity extends AppCompatActivity {
                 startActivity(back);
             }
         });
+    }
+
+    // Handle Up button click
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

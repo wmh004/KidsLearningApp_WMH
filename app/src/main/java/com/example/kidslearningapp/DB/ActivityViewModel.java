@@ -11,17 +11,17 @@ public class ActivityViewModel extends AndroidViewModel {
 
     private Repository repo;
     private LiveData<Integer> math, english, Total;
-    int count = 0;
+    boolean valid = true;
 
     public ActivityViewModel(Application application) {
         super(application);
         repo = new Repository(application);
 
-        // Initialise the database since later we only gonna update the values
-        if(count == 0) {
+        // Initialise the database since later we only gonna update the values (math & english)
+        if(valid) {
             ActivityClass activity = new ActivityClass(0, 0);
             insert(activity);
-            count++;
+            valid = false;
         }
 
         math = repo.getMath();

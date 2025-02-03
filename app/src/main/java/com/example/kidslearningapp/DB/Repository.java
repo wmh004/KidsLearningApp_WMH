@@ -47,5 +47,4 @@ public class Repository {
             dao.updateEnglish(english);
         });
     }
-
 }
